@@ -1,0 +1,51 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Guest</h1>
+
+<f:flashMessages renderMode="div" />
+
+<table  class="tx_bpwedding" >
+	<tr>
+		<th><f:translate key="tx_bpwedding_domain_model_guest.name" /></th>
+		<th><f:translate key="tx_bpwedding_domain_model_guest.email" /></th>
+		<th><f:translate key="tx_bpwedding_domain_model_guest.phone" /></th>
+		<th><f:translate key="tx_bpwedding_domain_model_guest.person_count" /></th>
+		<th><f:translate key="tx_bpwedding_domain_model_guest.person_names" /></th>
+		<th><f:translate key="tx_bpwedding_domain_model_guest.meal1" /></th>
+		<th><f:translate key="tx_bpwedding_domain_model_guest.meal2" /></th>
+		<th><f:translate key="tx_bpwedding_domain_model_guest.meal3" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{guests}" as="guest">
+		<tr>
+			<td><f:link.action action="show" arguments="{guest : guest}"> {guest.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{guest : guest}"> {guest.email}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{guest : guest}"> {guest.phone}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{guest : guest}"> {guest.personCount}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{guest : guest}"> {guest.personNames}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{guest : guest}"> {guest.meal1}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{guest : guest}"> {guest.meal2}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{guest : guest}"> {guest.meal3}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{guest : guest}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{guest : guest}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New Guest</f:link.action>
+</f:section>

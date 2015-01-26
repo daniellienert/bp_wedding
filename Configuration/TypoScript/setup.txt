@@ -1,0 +1,28 @@
+
+plugin.tx_bpwedding {
+	view {
+		templateRootPath = {$plugin.tx_bpwedding.view.templateRootPath}
+		partialRootPath = {$plugin.tx_bpwedding.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_bpwedding.view.layoutRootPath}
+	}
+
+	persistence {
+		storagePid = {$plugin.tx_bpwedding.persistence.storagePid}
+	}
+
+	settings {
+		siteName = TEXT
+		siteName.value = TYPO3 Develop
+
+		siteSubline = TEXT
+		siteSubline.value >
+
+		startImagePath = TEXT
+		startImagePath.value = EXT:bp/Resources/Public/Images/HG
+	}
+}
+
+plugin.tx_felogin_pi1.templateFile = typo3conf/ext/bp_wedding/Resources/Private/Templates/Elements/Login.html
+
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bp_wedding/Configuration/TypoScript/Template.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bp_wedding/Configuration/TypoScript/YagThemes/SuperSizedLogin.ts">

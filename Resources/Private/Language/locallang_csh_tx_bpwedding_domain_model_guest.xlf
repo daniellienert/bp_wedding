@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-01-26T06:59:07Z" product-name="bp_wedding">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="phone.description">
+				<source>phone</source>
+			</trans-unit>
+			<trans-unit id="person_count.description">
+				<source>personCount</source>
+			</trans-unit>
+			<trans-unit id="person_names.description">
+				<source>personNames</source>
+			</trans-unit>
+			<trans-unit id="meal1.description">
+				<source>meal1</source>
+			</trans-unit>
+			<trans-unit id="meal2.description">
+				<source>meal2</source>
+			</trans-unit>
+			<trans-unit id="meal3.description">
+				<source>meal3</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

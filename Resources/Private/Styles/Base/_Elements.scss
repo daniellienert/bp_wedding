@@ -1,0 +1,85 @@
+.login-box  {
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+  left: 0;
+  color: black;
+  padding: 20px;
+
+
+  .container {
+    width: 360px;
+  }
+
+  .login-box-background {
+    padding:10px;
+
+    .form-group {
+
+      margin: 0;
+
+      .btn {
+        margin-top: 10px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+#main-content {
+
+  .content-background {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: $text-color;
+    width: 700px;
+
+    .content-inner {
+      padding: 20px;
+    }
+  }
+}
+
+.overlay {
+  height:30px;
+}
+
+
+
+/* partial opacity hack: configuration */
+.opacity {
+  opacity: 0.5;		/* modern browser */
+  -moz-opacity: 0.5;	/* older Mozilla browser */
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE8 in Standard Compliant Mode */
+  filter:alpha(opacity=50); /* IE5.x -7.0 */
+  background: black;
+}
+
+/* partial opacity hack, part I: Don't change the following properties! */
+.opacity-wrapper,
+.opacity-wrapper * {
+ // position:relative;
+}
+
+.opacity {
+  /* partial opacity hack, part II: Don't change the following properties! */
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+/* partial opacity hack, part III: IE6 support */
+* html .opacity-wrapper {
+  overflow:hidden;
+}
+* html .opacity {
+  width: 2000px;
+  height: 2000px;
+}
+
+
+

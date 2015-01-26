@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+	<div class="navbar" style="padding-top: 20px">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="#">
+					{siteName}
+				</a>
+
+				<div class="nav-collapse">
+					<ul class="nav pull-right">
+						<li>
+							<f:link.page pageUid="2" additionalParams="{logout:'logout'}">Abmelden</f:link.page>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+
+	</div>
+	<div class="row-fluid">
+
+		<div class="span3">
+			<ul class="nav nav-tabs nav-stacked">
+				<f:format.raw>{topMenu}</f:format.raw>
+			</ul>
+		</div>
+
+		<div class="span9">
+			<f:format.raw>{content}</f:format.raw>
+		</div>
+	</div>
+</div>

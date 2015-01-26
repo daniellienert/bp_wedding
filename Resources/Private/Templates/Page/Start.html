@@ -1,0 +1,32 @@
+{namespace bp=Tx_Bp_ViewHelpers}
+
+<div class="container">
+
+	<div class="front-card">
+		<div class="row">
+			<div class="span1">
+				<div style="padding-top: 5px">
+					<f:image src="typo3conf/ext/bp/Resources/Public/Images/LilieGray.png" alt="DPSG Lilie"></f:image>
+				</div>
+			</div>
+			<div class="span8" style="margin-left:5px">
+				<h1>{siteName}</h1>
+				<h3>{siteSubline}</h3>
+			</div>
+		</div>
+
+		<div class="row">&nbsp;</div>
+
+		<div class="row">
+			<div class="span7" style="width:500px">
+
+				<bp:randomImage path="{startImagePath}" alt="bePreparedTeaser" class="roundCorner"></bp:randomImage>
+			</div>
+
+			<div class="span4">
+				<f:format.raw>{content}</f:format.raw>
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,62 @@
+@media (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+	display: block;
+  }
+}
+
+.navbar {
+  margin-bottom: 15px;
+}
+
+.nav {
+  li {
+    font-size: 1.2em;
+	font-family: $font-alternative;
+    line-height: 20px;
+  }
+
+  .nav-home a {
+    background-image: url("../Images/dpsg-lilie.svg");
+    background-size: 4em auto;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: -1.4em -1em;
+    display: block;
+    width: 0.2em;
+    height: 1.13em;
+
+    span {
+      display: none;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.nav-pills {
+  li {
+	background-color: white;
+	color: $dpsg-blue;
+  }
+}
+
+.neos-contentcollection {
+  nav {
+    li {
+      a {
+        color: $dpsg-blue;
+        padding: 5px 15px;
+      }
+    }
+  }
+}
+
+.breadcrumb {
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.story-meta li {
+  list-style-type: square;
+}
