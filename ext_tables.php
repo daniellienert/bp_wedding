@@ -28,7 +28,7 @@ $GLOBALS['TCA']['tx_bpwedding_domain_model_guest'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'name,email,phone,person_count,person_names,meal1,meal2,meal3,',
+		'searchFields' => 'name,email,phone,person_count,person_names,meal1,meal2,meal3,message,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Guest.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_bpwedding_domain_model_guest.gif'
 	),

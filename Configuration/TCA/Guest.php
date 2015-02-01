@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $GLOBALS['TCA']['tx_bpwedding_domain_model_guest'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_bpwedding_domain_model_guest']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'hidden, name, email, phone, person_count, person_names, meal1, meal2, meal3',
+		'showRecordFieldList' => 'hidden, name, email, phone, person_count, person_names, meal1, meal2, meal3, message',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'hidden;;1, name, email, phone, person_count, person_names, meal1, meal2, meal3, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'hidden;;1, name, email, phone, person_count, person_names, meal1, meal2, meal3, message, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -126,6 +126,16 @@ $GLOBALS['TCA']['tx_bpwedding_domain_model_guest'] = array(
 				'type' => 'input',
 				'size' => 4,
 				'eval' => 'int'
+			)
+		),
+		'message' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:bp_wedding/Resources/Private/Language/locallang_db.xlf:tx_bpwedding_domain_model_guest.message',
+			'config' => array(
+				'type' => 'text',
+				'cols' => 40,
+				'rows' => 15,
+				'eval' => 'trim'
 			)
 		),
 		

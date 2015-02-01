@@ -231,4 +231,27 @@ class GuestTest extends \TYPO3\CMS\Core\Tests\UnitTestCase {
 			$this->subject
 		);
 	}
+
+	/**
+	 * @test
+	 */
+	public function getMessageReturnsInitialValueForString() {
+		$this->assertSame(
+			'',
+			$this->subject->getMessage()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setMessageForStringSetsMessage() {
+		$this->subject->setMessage('Conceived at T3CON10');
+
+		$this->assertAttributeEquals(
+			'Conceived at T3CON10',
+			'message',
+			$this->subject
+		);
+	}
 }

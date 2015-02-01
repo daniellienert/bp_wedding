@@ -89,6 +89,13 @@ class Guest extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $meal3 = 0;
 
 	/**
+	 * message
+	 *
+	 * @var string
+	 */
+	protected $message = '';
+
+	/**
 	 * Returns the name
 	 *
 	 * @return string $name
@@ -238,6 +245,25 @@ class Guest extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setMeal3($meal3) {
 		$this->meal3 = $meal3;
+	}
+
+	/**
+	 * Returns the message
+	 *
+	 * @return string $message
+	 */
+	public function getMessage() {
+		return $this->message;
+	}
+
+	/**
+	 * Sets the message
+	 *
+	 * @param string $message
+	 * @return void
+	 */
+	public function setMessage($message) {
+		$this->message = $message;
 	}
 
 }
