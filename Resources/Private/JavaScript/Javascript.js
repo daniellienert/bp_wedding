@@ -1,7 +1,11 @@
 
-
 jQuery( document ).ready(function($) {
-	$('.content-background').height($(window).height() - 40);
+
+	adjustOverlayHeight();
+
+	$( window ).resize(function() {
+		adjustOverlayHeight();
+	});
 
 	/** GMaps Integration **/
 	$('.map-canvas').each(function (index) {
@@ -22,3 +26,17 @@ jQuery( document ).ready(function($) {
 		});
 	});
 });
+
+
+function adjustOverlayHeight() {
+	var windowHeight = $(window).height();
+	var minOverlayHeight = windowHeight - 40;
+
+	console.log('Content was to ' + $('.content-background').height() + ' monOverlay: ' + minOverlayHeight);
+
+	if(minOverlayHeight > $('.content-background').height()) {
+		$('.content-background').height(minOverlayHeight);
+	}
+
+	console.log('Resized to ' + $('.content-background').height());
+}

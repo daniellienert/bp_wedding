@@ -38,6 +38,7 @@
 
     .content-inner {
       padding: 20px;
+      z-index: 10;
     }
   }
 }
@@ -70,6 +71,7 @@
   position:absolute;
   top:0;
   left:0;
+  z-index: -1;
 }
 
 /* partial opacity hack, part III: IE6 support */

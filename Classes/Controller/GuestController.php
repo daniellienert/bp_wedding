@@ -1,6 +1,6 @@
 <?php
 namespace DL\BpWedding\Controller;
-
+use DL\BpWedding\Domain\Model\Guest;
 
 /***************************************************************
  *
@@ -27,6 +27,7 @@ namespace DL\BpWedding\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+
 /**
  * GuestController
  */
@@ -39,6 +40,13 @@ class GuestController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 * @inject
 	 */
 	protected $guestRepository = NULL;
+
+
+	/**
+	 * @var \TYPO3\CMS\Core\Mail\MailMessage
+	 * @inject
+	 */
+	protected $mailer;
 
 	/**
 	 * action list
@@ -53,24 +61,50 @@ class GuestController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * action new
 	 *
-	 * @param \DL\BpWedding\Domain\Model\Guest $newGuest
+	 * @param Guest $newGuest
 	 * @ignorevalidation $newGuest
 	 * @return void
 	 */
-	public function newAction(\DL\BpWedding\Domain\Model\Guest $newGuest = NULL) {
+	public function newAction(Guest $newGuest = NULL) {
 		$this->view->assign('newGuest', $newGuest);
 	}
 
 	/**
 	 * action create
 	 *
-	 * @param \DL\BpWedding\Domain\Model\Guest $newGuest
+	 * @param Guest $newGuest
 	 * @return void
 	 */
-	public function createAction(\DL\BpWedding\Domain\Model\Guest $newGuest) {
-		$this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See <a href="http://wiki.typo3.org/T3Doc/Extension_Builder/Using_the_Extension_Builder#1._Model_the_domain" target="_blank">Wiki</a>', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR);
+	public function createAction(Guest $newGuest) {
 		$this->guestRepository->add($newGuest);
-		$this->redirect('list');
+
+		$this->sendMail($newGuest);
+
+		$this->redirect('thankYou');
 	}
 
+
+	/**
+	 * Shows a sendmaile
+	 */
+	public function thankYouAction() {
+	}
+
+
+	/**
+	 * @param Guest $newGuest
+	 */
+	protected function sendMail(Guest $newGuest) {
+		$view = $this->objectManager->get('TYPO3\CMS\Fluid\View\StandaloneView'); /** @var \TYPO3\CMS\Fluid\View\StandaloneView $view */
+		$view->setTemplatePathAndFilename(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('bp_wedding') . '/Resources/Private/Templates/Mail/NewGuest.html');
+		$view->assign('guest', $newGuest);
+
+		 $this->mailer
+			->setSubject($newGuest->getName() . ' hat sich zur Hochzeit angemeldet.')
+			->setFrom(array('mail@bsys.net' => 'Hochzeits Homepage'))
+			->setTo(array('mail@lienert.cc'))
+			->setBody('Neue Anmeldung.')
+			->addPart($view->render(), 'text/html')
+			->send();
+	}
 }

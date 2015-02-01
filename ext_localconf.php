@@ -7,12 +7,26 @@ if (!defined('TYPO3_MODE')) {
 	'DL.' . $_EXTKEY,
 	'Guests',
 	array(
-		'Guest' => 'list, new, create',
-		
+		'Guest' => 'new, create, thankYou',
+
 	),
 	// non-cacheable actions
 	array(
 		'Guest' => 'create',
-		
+
+	)
+);
+
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'DL.' . $_EXTKEY,
+	'Admin',
+	array(
+		'Guest' => 'list, new, create',
+
+	),
+	// non-cacheable actions
+	array(
+		'Guest' => 'create',
 	)
 );

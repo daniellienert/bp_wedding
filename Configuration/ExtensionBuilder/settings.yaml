@@ -52,6 +52,8 @@ overwriteSettings:
     Private:
       #Language: merge
       #Templates: keep
+      Templates:
+        New.html: keep
 
   ext_icon.gif: keep
 
