@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $GLOBALS['TCA']['tx_bpwedding_domain_model_guest'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_bpwedding_domain_model_guest']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'hidden, name, email, phone, person_count, person_names, meal1, meal2, meal3, message',
+		'showRecordFieldList' => 'hidden, name, email, phone, person_count, guest_details, message',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'hidden;;1, name, email, phone, person_count, person_names, meal1, meal2, meal3, message, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'hidden;;1, name, email, phone, person_count, guest_details, message, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -92,41 +92,14 @@ $GLOBALS['TCA']['tx_bpwedding_domain_model_guest'] = array(
 				'eval' => 'int'
 			)
 		),
-		'person_names' => array(
+		'guest_details' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:bp_wedding/Resources/Private/Language/locallang_db.xlf:tx_bpwedding_domain_model_guest.person_names',
+			'label' => 'LLL:EXT:bp_wedding/Resources/Private/Language/locallang_db.xlf:tx_bpwedding_domain_model_guest.guest_details',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
 			),
-		),
-		'meal1' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bp_wedding/Resources/Private/Language/locallang_db.xlf:tx_bpwedding_domain_model_guest.meal1',
-			'config' => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			)
-		),
-		'meal2' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bp_wedding/Resources/Private/Language/locallang_db.xlf:tx_bpwedding_domain_model_guest.meal2',
-			'config' => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			)
-		),
-		'meal3' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:bp_wedding/Resources/Private/Language/locallang_db.xlf:tx_bpwedding_domain_model_guest.meal3',
-			'config' => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			)
 		),
 		'message' => array(
 			'exclude' => 1,

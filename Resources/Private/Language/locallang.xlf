@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2015-01-26T06:59:07Z" product-name="bp_wedding">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-02-14T11:56:38Z" product-name="bp_wedding">
 		<header/>
 		<body>
 			<trans-unit id="tx_bpwedding_domain_model_guest">
@@ -18,17 +18,11 @@
 			<trans-unit id="tx_bpwedding_domain_model_guest.person_count">
 				<source>Person Count</source>
 			</trans-unit>
-			<trans-unit id="tx_bpwedding_domain_model_guest.person_names">
-				<source>Person Names</source>
+			<trans-unit id="tx_bpwedding_domain_model_guest.guest_details">
+				<source>Guest Details</source>
 			</trans-unit>
-			<trans-unit id="tx_bpwedding_domain_model_guest.meal1">
-				<source>Meal1</source>
-			</trans-unit>
-			<trans-unit id="tx_bpwedding_domain_model_guest.meal2">
-				<source>Meal2</source>
-			</trans-unit>
-			<trans-unit id="tx_bpwedding_domain_model_guest.meal3">
-				<source>Meal3</source>
+			<trans-unit id="tx_bpwedding_domain_model_guest.message">
+				<source>Message</source>
 			</trans-unit>
 		</body>
 	</file>

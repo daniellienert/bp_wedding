@@ -61,32 +61,11 @@ class Guest extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $personCount = 0;
 
 	/**
-	 * personNames
+	 * guestDetails
 	 *
 	 * @var string
 	 */
-	protected $personNames = '';
-
-	/**
-	 * meal1
-	 *
-	 * @var integer
-	 */
-	protected $meal1 = 0;
-
-	/**
-	 * meal2
-	 *
-	 * @var integer
-	 */
-	protected $meal2 = 0;
-
-	/**
-	 * meal3
-	 *
-	 * @var integer
-	 */
-	protected $meal3 = 0;
+	protected $guestDetails = '';
 
 	/**
 	 * message
@@ -172,79 +151,22 @@ class Guest extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Returns the personNames
+	 * Returns the guestDetails
 	 *
-	 * @return string $personNames
+	 * @return string $guestDetails
 	 */
-	public function getPersonNames() {
-		return $this->personNames;
+	public function getGuestDetails() {
+		return $this->guestDetails;
 	}
 
 	/**
-	 * Sets the personNames
+	 * Sets the guestDetails
 	 *
-	 * @param string $personNames
+	 * @param string $guestDetails
 	 * @return void
 	 */
-	public function setPersonNames($personNames) {
-		$this->personNames = $personNames;
-	}
-
-	/**
-	 * Returns the meal1
-	 *
-	 * @return integer $meal1
-	 */
-	public function getMeal1() {
-		return $this->meal1;
-	}
-
-	/**
-	 * Sets the meal1
-	 *
-	 * @param integer $meal1
-	 * @return void
-	 */
-	public function setMeal1($meal1) {
-		$this->meal1 = $meal1;
-	}
-
-	/**
-	 * Returns the meal2
-	 *
-	 * @return integer $meal2
-	 */
-	public function getMeal2() {
-		return $this->meal2;
-	}
-
-	/**
-	 * Sets the meal2
-	 *
-	 * @param integer $meal2
-	 * @return void
-	 */
-	public function setMeal2($meal2) {
-		$this->meal2 = $meal2;
-	}
-
-	/**
-	 * Returns the meal3
-	 *
-	 * @return integer $meal3
-	 */
-	public function getMeal3() {
-		return $this->meal3;
-	}
-
-	/**
-	 * Sets the meal3
-	 *
-	 * @param integer $meal3
-	 * @return void
-	 */
-	public function setMeal3($meal3) {
-		$this->meal3 = $meal3;
+	public function setGuestDetails($guestDetails) {
+		$this->guestDetails = $guestDetails;
 	}
 
 	/**

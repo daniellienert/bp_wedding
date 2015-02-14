@@ -10,10 +10,7 @@ CREATE TABLE tx_bpwedding_domain_model_guest (
 	email varchar(255) DEFAULT '' NOT NULL,
 	phone varchar(255) DEFAULT '' NOT NULL,
 	person_count int(11) DEFAULT '0' NOT NULL,
-	person_names varchar(255) DEFAULT '' NOT NULL,
-	meal1 int(11) DEFAULT '0' NOT NULL,
-	meal2 int(11) DEFAULT '0' NOT NULL,
-	meal3 int(11) DEFAULT '0' NOT NULL,
+	guest_details varchar(255) DEFAULT '' NOT NULL,
 	message text NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
