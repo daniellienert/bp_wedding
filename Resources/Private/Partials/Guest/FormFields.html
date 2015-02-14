@@ -18,33 +18,30 @@
 	<f:form.textfield property="personCount" class="form-control" placeholder="Personenanzahl"/>
 </div>
 
-<div class="form-group">
-	<label for="personNames">Wie heißen die Personen die du anmeldest?</label>
-	<f:form.textfield property="personNames" class="form-control" placeholder="Namen der Personen"/>
-</div>
-
-<h3>Essenswünsche</h3>
+<h2>Essenswünsche</h2>
 
 <p>
 	Jetzt zum spannenden Teil: Auf unserer Hochzeit wird es drei verschiedene Gerichte geben. Da sollte doch für jeden Geschmack was dabei sein.
+	<ul class="no-bullet">
+		<li>
+			Für die richtigen Urloffer und alle die es werden wollen gibt es <b>Rindfleisch mit Meerettich</b>.
+		</li>
+		<li>
+			Kein Meerettich? Dann ist sicher der <b>Sauerbraten mit Nudeln und Knödeln</b> was für dich.
+		</li>
+		<li>
+			Gar kein Fleisch? Für dich haben wir leckere vegetarische <b>Karotten-Ricotta Knödelinos</b>.
+		</li>
+	</ul>
 </p>
 
-<div class="form-group">
-	<label for="meal1">Für die richtigen Urloffer und alle die es werden wollen gibt es <b>Rindfleisch mit Meerettich:</b></label>
-	<f:form.textfield property="meal1" class="form-control" placeholder="Anzahl Rindfleisch mit Meerettich"/>
-</div>
+<f:for each="{1,2,3,4,5,6}" as="id">
+	<div class="form-group">
+		<f:form.textfield property="email" class="form-control" placeholder="Name"/>
+	</div>
+</f:for>
 
-<div class="form-group">
-	<label for="meal2">Kein Meerettich? Dann ist sicher der <b>Sauerbraten mit Nudeln und Knödeln</b> was für dich:</label>
-	<f:form.textfield property="meal2" class="form-control" placeholder="Anzahl Sauerbraten"/>
-</div>
-
-<div class="form-group">
-	<label for="meal3">Gar kein Fleisch? Für dich haben wir leckere vegetarische <b>Karotten-Ricotta Knödelinos</b></label>
-	<f:form.textfield property="meal3" class="form-control" placeholder="Anzahl Vegetarisch"/>
-</div>
-
-<h3>Was du uns noch sagen möchtest</h3>
+<h2>Was du uns noch sagen möchtest</h2>
 <div class="form-group">
 	<f:form.textarea property="message" class="form-control"/>
 </div>
