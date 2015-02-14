@@ -5,7 +5,7 @@ jQuery( document ).ready(function($) {
 	adjustGestDetails();
 
 	$( window ).resize(function() {
-		/adjustOverlayHeight();
+		adjustOverlayHeight();
 	});
 
 	/** GMaps Integration **/
