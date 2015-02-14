@@ -10,7 +10,7 @@ Eine neuer Gast hat sich angemeldet.
 	</tr><tr>
 		<td colspan="2"><b>Hat {guest.personCount} Personen angemeldet</b></td>
 	</tr>
-		<f:for each="{newGuest.guestDetailEntries}" key="id" as="guestDetail">
+		<f:for each="{guest.guestDetailEntries}" key="id" as="guestDetail">
 			<f:if condition="{guestDetail.name}">
 				<tr>
 					<td>{guestDetail.name}</td>
