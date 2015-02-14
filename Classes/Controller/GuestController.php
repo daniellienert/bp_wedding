@@ -66,6 +66,8 @@ class GuestController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	 * @return void
 	 */
 	public function newAction(Guest $newGuest = NULL) {
+		if($newGuest === NULL) $newGuest = new Guest();
+
 		$this->view->assign('newGuest', $newGuest);
 	}
 
@@ -84,9 +86,7 @@ class GuestController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	}
 
 
-	/**
-	 * Shows a sendmaile
-	 */
+
 	public function thankYouAction() {
 	}
 

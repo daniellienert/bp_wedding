@@ -2,6 +2,7 @@
 jQuery( document ).ready(function($) {
 
 	adjustOverlayHeight();
+	adjustGestDetails();
 
 	$( window ).resize(function() {
 		adjustOverlayHeight();
@@ -25,6 +26,14 @@ jQuery( document ).ready(function($) {
 			}
 		});
 	});
+
+	$( "#person-count" ).change(function() {
+		adjustGestDetails();
+	});
+
+	$("#guest-name").change(function() {
+		$('#guest-name-0').val($('#guest-name').val());
+	});
 });
 
 
@@ -32,11 +41,24 @@ function adjustOverlayHeight() {
 	var windowHeight = $(window).height();
 	var minOverlayHeight = windowHeight - 40;
 
-	console.log('Content was to ' + $('.content-background').height() + ' monOverlay: ' + minOverlayHeight);
-
 	if(minOverlayHeight > $('.content-background').height()) {
 		$('.content-background').height(minOverlayHeight);
 	}
+}
 
-	console.log('Resized to ' + $('.content-background').height());
+function adjustGestDetails() {
+	var guestCount = parseInt($( "#person-count" ).val());
+
+	if(guestCount == 0) {
+		guestCount = 2;
+	}
+
+
+	$('.guest-detail').each(function( index ) {
+		if(index < guestCount) {
+			$(this).show(100);
+		} else {
+			$(this).hide(100);
+		}
+	});
 }

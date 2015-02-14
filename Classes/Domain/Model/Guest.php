@@ -74,6 +74,17 @@ class Guest extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	protected $message = '';
 
+
+	/**
+	 * @var array
+	 */
+	protected $guestDetailEntries;
+
+
+	public function __construct() {
+		$this->generateGuestDetails();
+	}
+
 	/**
 	 * Returns the name
 	 *
@@ -188,4 +199,33 @@ class Guest extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		$this->message = $message;
 	}
 
+
+	/**
+	 * @return array
+	 */
+	public function getGuestDetailEntries() {
+		return json_decode($this->guestDetails, TRUE);
+	}
+
+
+	/**
+	 * @param array $entries
+	 */
+	public function setGuestDetailEntries(array $entries) {
+		$this->guestDetails = json_encode($entries);
+	}
+
+
+	/**
+	 * @param int $count
+	 */
+	public function generateGuestDetails($count = 6) {
+		$entries = array();
+
+		for($i = 0; $i < $count; $i++) {
+			$entries[$i] = array();
+		}
+
+		$this->setGuestDetailEntries($entries);
+	}
 }

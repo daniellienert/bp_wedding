@@ -8,22 +8,14 @@ Eine neuer Gast hat sich angemeldet.
 	</tr><tr>
 		<td>eMail</td><td>{guest.email}</td>
 	</tr><tr>
-		<td colspan="2"><b>Hat angemeldet</b></td>
-	</tr><tr>
-		<td>Angemeldete Personen</td><td>{guest.personCount}</td>
-	</tr><tr>
-		<td>Namen der Personen</td><td>{guest.personNames}</td>
-	</tr><tr>
-		<td colspan="2"><b>Davon wollen</b></td>
-	</tr><tr>
-		<td>Rindfleisch mit Meerettich</td><td>{guest.meal1}</td>
-	</tr><tr>
-		<td>Sauerbraten</td><td>{guest.meal2}</td>
-	</tr><tr>
-		<td>Vegetarisch</td><td>{guest.meal3}</td>
-	</tr><tr>
-		<td colspan="2"><b>Nachricht an uns</b></td>
-	</tr><tr>
-		<td colspan="2">{guest.message}</td>
+		<td colspan="2"><b>Hat {guest.personCount} Personen angemeldet</b></td>
 	</tr>
+		<f:for each="{newGuest.guestDetailEntries}" key="id" as="guestDetail">
+			<f:if condition="{guestDetail.name}">
+				<tr>
+					<td>{guestDetail.name}</td>
+					<td>{guestDetail.meal}</td>
+				</tr>
+			</f:if>
+		</f:for>
 </table>

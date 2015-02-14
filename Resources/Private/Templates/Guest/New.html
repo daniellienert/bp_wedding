@@ -7,8 +7,8 @@
 
 <f:render partial="FormErrors" arguments="{object:Guest}" />
 
-<f:form action="create" name="newGuest" object="{newGuest}">
-	<f:render partial="Guest/FormFields" />
+<f:form action="create" name="newGuest" object="{newGuest}" class="form-inline">
+	<f:render partial="Guest/FormFields" arguments="{newGuest:newGuest}"/>
 	<f:form.submit value="Anmelden" class="btn btn-primary"/>
 </f:form>
 </f:section>
