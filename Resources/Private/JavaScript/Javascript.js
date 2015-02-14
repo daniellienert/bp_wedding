@@ -1,11 +1,11 @@
 
 jQuery( document ).ready(function($) {
 
-	// adjustOverlayHeight();
+	adjustOverlayHeight();
 	adjustGestDetails();
 
 	$( window ).resize(function() {
-		// adjustOverlayHeight();
+		/adjustOverlayHeight();
 	});
 
 	/** GMaps Integration **/
