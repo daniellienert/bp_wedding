@@ -44,9 +44,8 @@ function adjustOverlayHeight() {
 		var windowHeight = $(window).height();
 	}
 
-
 	var minOverlayHeight = windowHeight - 40;
-
+	alert('set ' + minOverlayHeight);
 	if(minOverlayHeight > $('.content-background').height()) {
 		$('.content-background').height(minOverlayHeight);
 	}
