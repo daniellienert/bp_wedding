@@ -34,7 +34,7 @@
 <h2>Essenswünsche</h2>
 
 <p>
-	Jetzt zum spannenden Teil: Auf unserer Hochzeit wird es drei verschiedene Gerichte geben. Da sollte doch für jeden Geschmack was dabei sein.
+	Jetzt zum spannenden Teil der Anmeldung: Auf unserer Hochzeit wird es drei verschiedene Gerichte geben. Da sollte doch für jeden Geschmack was dabei sein.
 	<ul class="no-bullet">
 		<li>
 			Für die richtigen Urloffer und alle die es werden wollen gibt es <b>Rindfleisch mit Meerettich</b>.
@@ -45,9 +45,11 @@
 		<li>
 			Gar kein Fleisch? Für dich haben wir leckere vegetarische <b>Karotten-Ricotta Knödelinos</b>.
 		</li>
+		<li>
+			Und für unsere kleinen Gäste haben wir sogar ein besonderes <b>Kindergericht</b>.
+		</li>
 	</ul>
 </p>
-
 
 <div id="guest-details">
 	<f:for each="{newGuest.guestDetailEntries}" key="id" as="guestDetail">
@@ -59,7 +61,7 @@
 				<label>möchte</label>
 			</div>
 			<div class="form-group col-md-4">
-				<f:form.select name="newGuest[guestDetailEntries][{id}][meal]" class="form-control" options="{Rindfleisch:'Rindfleisch mit Meerettich', Sauerbraten:'Sauerbraten mit Nudeln und Knödeln', Vegetarisch:'Karotten-Ricotta Knödelinos'}"/>
+				<f:form.select name="newGuest[guestDetailEntries][{id}][meal]" class="form-control" options="{Rindfleisch:'Rindfleisch mit Meerettich', Sauerbraten:'Sauerbraten mit Nudeln und Knödeln', Vegetarisch:'Karotten-Ricotta Knödelinos', Kindergericht:'Das Kindergericht'}"/>
 			</div>
 		</div>
 	</f:for>
