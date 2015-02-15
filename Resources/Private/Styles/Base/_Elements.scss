@@ -38,7 +38,6 @@
 
     .content-inner {
       padding: 20px;
-      z-index: 10;
     }
   }
 }
@@ -61,8 +60,9 @@
 /* partial opacity hack, part I: Don't change the following properties! */
 .opacity-wrapper,
 .opacity-wrapper * {
- // position:relative;
+  position:relative;
 }
+
 
 .opacity {
   /* partial opacity hack, part II: Don't change the following properties! */
@@ -71,7 +71,6 @@
   position:absolute;
   top:0;
   left:0;
-  z-index: -1;
 }
 
 /* partial opacity hack, part III: IE6 support */
