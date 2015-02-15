@@ -27,7 +27,7 @@ jQuery( document ).ready(function($) {
 		});
 	});
 
-	$( "#person-count" ).change(function() {
+	$( "#person-count" ).keyup(function() {
 		adjustGestDetails();
 	});
 
@@ -53,7 +53,9 @@ function adjustOverlayHeight() {
 function adjustGestDetails() {
 	var guestCount = parseInt($( "#person-count" ).val());
 
-	if(guestCount == 0) {
+	console.log(guestCount);
+
+	if(!(guestCount > 0)) {
 		guestCount = 2;
 	}
 
