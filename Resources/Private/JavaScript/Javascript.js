@@ -51,22 +51,22 @@ function adjustOverlayHeight() {
 }
 
 function adjustGestDetails() {
-	var guestCount = parseInt($( "#person-count" ).val());
+	if($("#person-count").length) {
+		var guestCount = parseInt($( "#person-count" ).val());
 
-	console.log(guestCount);
-
-	if(!(guestCount > 0)) {
-		guestCount = 2;
-	}
-
-
-	$('.guest-detail').each(function( index ) {
-		if(index < guestCount) {
-			$(this).show(100);
-		} else {
-			$(this).hide(100);
+		if(!(guestCount > 0)) {
+			guestCount = 2;
 		}
-	});
+
+
+		$('.guest-detail').each(function( index ) {
+			if(index < guestCount) {
+				$(this).show(100);
+			} else {
+				$(this).hide(100);
+			}
+		});
+	}
 }
 
 function isMobile() {
