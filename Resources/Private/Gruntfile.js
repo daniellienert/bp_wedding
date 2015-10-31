@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 					'../../../yag_themepack_jquery/Resources/Public/GallerySource/SuperSized/slideshow/js/supersized.3.2.7.min.js',
 					'../../../yag_themepack_jquery/Resources/Public/GallerySource/SuperSized/slideshow/theme/supersized.shutter.min.js',
 					'../../../yag_themepack_jquery/Resources/Public/GallerySource/justified_gallery/dist/js/jquery.justifiedGallery.js',
-					'../../../yag_themepack_jquery/Resources/Public/GallerySource/photoswipe/dist/photoswipe.min.js',
+					'../../../yag_themepack_jquery/Resources/Public/GallerySource/photoswipe/dist/photoswipe.js',
 					'../../../yag_themepack_jquery/Resources/Public/GallerySource/photoswipe/dist/photoswipe-ui-default.js'
 				]
 			}

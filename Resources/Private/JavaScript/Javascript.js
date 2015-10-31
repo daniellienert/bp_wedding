@@ -44,7 +44,7 @@ jQuery( document ).ready(function($) {
 	 * Justified initialization function
 	 */
 	function initJustified($selector, settings) {
-		$selector.justifiedGallery(settings.rondell);
+		$selector.justifiedGallery(settings.justified);
 	}
 
 	/**
