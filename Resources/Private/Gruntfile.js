@@ -26,11 +26,12 @@ module.exports = function (grunt) {
 				libs: [
 					'bower_components/jquery/dist/jquery.min.js',
 					'bower_components/bootstrap-sass-official/dist/js/bootstrap.js',
-					'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
-					'bower_components/gmaps/gmaps.js',
 					'../../../yag_themepack_jquery/Resources/Public/GallerySource/SuperSized/slideshow/js/jquery.easing.min.js',
 					'../../../yag_themepack_jquery/Resources/Public/GallerySource/SuperSized/slideshow/js/supersized.3.2.7.min.js',
-					'../../../yag_themepack_jquery/Resources/Public/GallerySource/SuperSized/slideshow/theme/supersized.shutter.min.js'
+					'../../../yag_themepack_jquery/Resources/Public/GallerySource/SuperSized/slideshow/theme/supersized.shutter.min.js',
+					'../../../yag_themepack_jquery/Resources/Public/GallerySource/justified_gallery/dist/js/jquery.justifiedGallery.js',
+					'../../../yag_themepack_jquery/Resources/Public/GallerySource/photoswipe/dist/photoswipe.min.js',
+					'../../../yag_themepack_jquery/Resources/Public/GallerySource/photoswipe/dist/photoswipe-ui-default.js'
 				]
 			}
 		},

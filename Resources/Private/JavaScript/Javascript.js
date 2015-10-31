@@ -34,7 +34,37 @@ jQuery( document ).ready(function($) {
 	$("#guest-name").change(function() {
 		$('#guest-name-0').val($('#guest-name').val());
 	});
+
+
 });
+
+
+(function ($) {
+	/**
+	 * Justified initialization function
+	 */
+	function initJustified($selector, settings) {
+		$selector.justifiedGallery(settings.rondell);
+	}
+
+	/**
+	 * Loop over all yag galleries and init the frontend plugins
+	 */
+	$(function () {
+		$('.yag-gallery').each(function () {
+			var $self = $(this),
+				settings = $self.data('yag-gallery-settings');
+
+			switch (settings.theme) {
+				case 'justified':
+					initJustified($self, settings);
+					break;
+			}
+		});
+	});
+})(jQuery);
+
+
 
 
 function adjustOverlayHeight() {
