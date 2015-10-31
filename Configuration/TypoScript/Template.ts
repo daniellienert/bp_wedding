@@ -61,8 +61,8 @@ page {
  }
 
  includeJSFooter {
-	10-gmaps = http://maps.google.com/maps/api/js?sensor=true
-	10-gmaps.forceOnTop = 1
+//	10-gmaps = http://maps.google.com/maps/api/js?sensor=true
+//	10-gmaps.forceOnTop = 1
   	20-lib = typo3conf/ext/bp_wedding/Resources/Public/JavaScript/libs.min.js
 	20-lib.forceOnTop = 0
   	30-app = typo3conf/ext/bp_wedding/Resources/Public/JavaScript/app.min.js
